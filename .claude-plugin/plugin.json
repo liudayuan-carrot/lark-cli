@@ -1,0 +1,19 @@
+{
+  "name": "lark-cli",
+  "version": "1.0.24",
+  "description": "Lark/Feishu CLI skills for Claude Code - messaging, docs, sheets, tasks, calendar, contacts, drive, and more. Requires lark-cli binary installed.",
+  "author": {
+    "name": "Lark Suite"
+  },
+  "repository": "https://github.com/larksuite/cli",
+  "license": "MIT",
+  "keywords": [
+    "lark",
+    "feishu",
+    "messaging",
+    "docs",
+    "tasks",
+    "calendar",
+    "productivity"
+  ]
+}

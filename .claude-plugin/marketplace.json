@@ -1,0 +1,18 @@
+{
+  "name": "larksuite-cli",
+  "owner": {
+    "name": "Lark Suite"
+  },
+  "metadata": {
+    "description": "Lark/Feishu CLI skills for Claude Code - messaging, docs, tasks, calendar, and more",
+    "homepage": "https://github.com/larksuite/cli"
+  },
+  "plugins": [
+    {
+      "name": "lark-cli",
+      "version": "1.0.24",
+      "source": ".",
+      "description": "Lark/Feishu CLI skills - operate Lark resources via lark-cli commands"
+    }
+  ]
+}

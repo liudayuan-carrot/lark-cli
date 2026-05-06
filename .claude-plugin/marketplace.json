@@ -11,7 +11,12 @@
     {
       "name": "lark-cli",
       "version": "1.0.24",
-      "source": "./",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/liudayuan-carrot/lark-cli.git",
+        "path": ".",
+        "ref": "main"
+      },
       "description": "Lark/Feishu CLI skills - operate Lark resources via lark-cli commands"
     }
   ]

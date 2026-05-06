@@ -11,7 +11,7 @@
     {
       "name": "lark-cli",
       "version": "1.0.24",
-      "source": ".",
+      "source": "./",
       "description": "Lark/Feishu CLI skills - operate Lark resources via lark-cli commands"
     }
   ]

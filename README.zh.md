@@ -57,9 +57,23 @@
 
 #### 安装
 
-以下两种方式**任选其一**：
+以下三种方式**任选其一**：
 
-**方式一 — 从 npm 安装（推荐）：**
+**方式一 — Claude Code 插件安装（推荐）：**
+
+作为 Claude Code 插件安装，会自动完成 CLI 二进制文件和 Skill 注册：
+
+```bash
+# 添加 marketplace
+claude plugin marketplace add liudayuan-carrot/lark-cli
+
+# 安装插件
+claude plugin install lark-cli
+```
+
+安装完成后，重启 Claude Code 即可生效。
+
+**方式二 — 从 npm 安装：**
 
 ```bash
 # 安装 CLI
@@ -69,7 +83,7 @@ npm install -g @larksuite/cli
 npx skills add larksuite/cli -y -g
 ```
 
-**方式二 — 从源码安装：**
+**方式三 — 从源码安装：**
 
 需要 Go `v1.23`+ 和 Python 3。
 
@@ -101,11 +115,15 @@ lark-cli calendar +agenda
 
 **第 1 步 — 安装**
 
-```bash
-# 安装 CLI
-npm install -g @larksuite/cli
+如果插件尚未安装，运行：
 
-# 安装 CLI SKILL（必需）
+```bash
+# 方式 A：Claude Code 插件（推荐）
+claude plugin marketplace add liudayuan-carrot/lark-cli
+claude plugin install lark-cli
+
+# 方式 B：npm
+npm install -g @larksuite/cli
 npx skills add larksuite/cli -y -g
 ```
 

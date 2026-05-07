@@ -59,7 +59,21 @@ Before you start, make sure you have:
 
 Choose **one** of the following methods:
 
-**Option 1 — From npm (recommended):**
+**Option 1 — Claude Code Plugin (recommended):**
+
+Install as a Claude Code plugin — this handles both the CLI binary and skill registration automatically:
+
+```bash
+# Add the marketplace
+claude plugin marketplace add liudayuan-carrot/lark-cli
+
+# Install the plugin
+claude plugin install lark-cli
+```
+
+After installation, restart Claude Code to activate the plugin.
+
+**Option 2 — From npm:**
 
 ```bash
 # Install CLI
@@ -69,7 +83,7 @@ npm install -g @larksuite/cli
 npx skills add larksuite/cli -y -g
 ```
 
-**Option 2 — From source:**
+**Option 3 — From source:**
 
 Requires Go `v1.23`+ and Python 3.
 
@@ -101,11 +115,15 @@ lark-cli calendar +agenda
 
 **Step 1 — Install**
 
-```bash
-# Install CLI
-npm install -g @larksuite/cli
+If the plugin is not already installed, run:
 
-# Install CLI SKILL (required)
+```bash
+# Option A: Claude Code Plugin (recommended)
+claude plugin marketplace add liudayuan-carrot/lark-cli
+claude plugin install lark-cli
+
+# Option B: npm
+npm install -g @larksuite/cli
 npx skills add larksuite/cli -y -g
 ```
 

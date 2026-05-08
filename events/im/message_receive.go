@@ -21,6 +21,7 @@ type ImMessageReceiveOutput struct {
 	CreateTime  string `json:"create_time,omitempty"  desc:"Message creation time (ms timestamp string)"                                                                                                                                         kind:"timestamp_ms"`
 	ChatID      string `json:"chat_id,omitempty"      desc:"Chat/conversation ID; prefixed with oc_"                                                                                                                                             kind:"chat_id"`
 	ChatType    string `json:"chat_type,omitempty"    desc:"Conversation type"                                                                                                                                                                   enum:"p2p,group"`
+	ThreadID    string `json:"thread_id,omitempty"    desc:"Thread ID if message belongs to a thread; prefixed with omt_"                                                                                                                        kind:"thread_id"`
 	MessageType string `json:"message_type,omitempty" desc:"Message type"`
 	SenderID    string `json:"sender_id,omitempty"    desc:"Sender open_id; prefixed with ou_"                                                                                                                                                   kind:"open_id"`
 	Content     string `json:"content,omitempty"      desc:"Message content. For most types (text/post/image/file/audio, etc.) this is pre-rendered human-readable text. For interactive (cards) it stays as the raw JSON string and callers must fromjson to parse it."`
@@ -41,6 +42,7 @@ func processImMessageReceive(_ context.Context, _ event.APIClient, raw *event.Ra
 				MessageType string        `json:"message_type"`
 				Content     string        `json:"content"`
 				CreateTime  string        `json:"create_time"`
+				ThreadID    string        `json:"thread_id"`
 				Mentions    []interface{} `json:"mentions"`
 			} `json:"message"`
 			Sender struct {
@@ -77,6 +79,7 @@ func processImMessageReceive(_ context.Context, _ event.APIClient, raw *event.Ra
 		CreateTime:  msg.CreateTime,
 		ChatID:      msg.ChatID,
 		ChatType:    msg.ChatType,
+		ThreadID:    msg.ThreadID,
 		MessageType: msg.MessageType,
 		SenderID:    envelope.Event.Sender.SenderID.OpenID,
 		Content:     content,

@@ -63,12 +63,14 @@ Choose **one** of the following methods:
 
 Install as a Claude Code plugin — this handles both the CLI binary and skill registration automatically:
 
-```bash
+Run these inside a Claude Code session (they are slash commands, not shell commands):
+
+```text
 # Add the marketplace
-claude plugin marketplace add liudayuan-carrot/lark-cli
+/plugin marketplace add liudayuan-carrot/lark-cli
 
 # Install the plugin
-claude plugin install lark-cli
+/plugin install lark-cli@larksuite-cli
 ```
 
 After installation, restart Claude Code to activate the plugin.
@@ -117,11 +119,13 @@ lark-cli calendar +agenda
 
 If the plugin is not already installed, run:
 
-```bash
-# Option A: Claude Code Plugin (recommended)
-claude plugin marketplace add liudayuan-carrot/lark-cli
-claude plugin install lark-cli
+```text
+# Option A: Claude Code Plugin (recommended) — slash commands, run inside a Claude Code session
+/plugin marketplace add liudayuan-carrot/lark-cli
+/plugin install lark-cli@larksuite-cli
+```
 
+```bash
 # Option B: npm
 npm install -g @larksuite/cli
 npx skills add larksuite/cli -y -g

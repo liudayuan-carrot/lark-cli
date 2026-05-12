@@ -63,12 +63,14 @@
 
 作为 Claude Code 插件安装，会自动完成 CLI 二进制文件和 Skill 注册：
 
-```bash
+在 Claude Code 会话内执行下列 slash 命令（不是 shell 命令）：
+
+```text
 # 添加 marketplace
-claude plugin marketplace add liudayuan-carrot/lark-cli
+/plugin marketplace add liudayuan-carrot/lark-cli
 
 # 安装插件
-claude plugin install lark-cli
+/plugin install lark-cli@larksuite-cli
 ```
 
 安装完成后，重启 Claude Code 即可生效。
@@ -117,11 +119,13 @@ lark-cli calendar +agenda
 
 如果插件尚未安装，运行：
 
-```bash
-# 方式 A：Claude Code 插件（推荐）
-claude plugin marketplace add liudayuan-carrot/lark-cli
-claude plugin install lark-cli
+```text
+# 方式 A：Claude Code 插件（推荐）— slash 命令，在 Claude Code 会话中执行
+/plugin marketplace add liudayuan-carrot/lark-cli
+/plugin install lark-cli@larksuite-cli
+```
 
+```bash
 # 方式 B：npm
 npm install -g @larksuite/cli
 npx skills add larksuite/cli -y -g
